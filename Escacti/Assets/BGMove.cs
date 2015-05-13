@@ -6,11 +6,12 @@ public class BGMove : MonoBehaviour {
 	private float spriteWidth;
 	public SpriteRenderer spriteRenderer;
 	public Transform cameraTransform;
-
+	[SerializeField]
+	protected float speed;
 
 	// Use this for initialization
 	void Start () {
-		spriteWidth = 2.5f * spriteRenderer.sprite.bounds.size.x;
+		spriteWidth = speed * spriteRenderer.sprite.bounds.size.x;
 		Debug.Log (spriteWidth);
 	}
 	
